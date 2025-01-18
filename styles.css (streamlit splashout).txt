@@ -1,0 +1,115 @@
+styles.css
+=================================
+
+
+.css-ffhzg2{
+    background-color: rgb(34, 32, 32) !important;
+    color: rgb(244, 237, 237) !important;
+}
+
+[data-testid="stHeader"] {
+    background-color: rgb(34, 32, 32) !important;
+    color: rgb(244, 237, 237) !important;
+}
+
+[data-testid="stDecoration"] {
+    background-image: linear-gradient(90deg, rgb(89,59,176), rgb(170,125,255), rgb(89,59,176)) !important;
+}
+
+[data-testid="stToolbar"] {
+    display: none;
+}
+
+a {
+    display: none !important;
+}
+
+svg {
+    display: none !important;
+}
+
+footer{
+    display: none;
+}
+
+
+/* this is all nav/tab bar related stuff 
+=============================================================== */
+[role="tablist"] {
+    display: flex;
+    justify-content: space-between;
+}   
+
+[role="tab"] {
+    background-color: rgb(34, 32, 32) !important;
+    color: rgb(89,59,176);
+}
+
+[role="tab"]:hover {
+    color: rgb(170,125,255) !important;
+}
+
+[role="tab"]:focus {
+    color: rgb(170,125,255) !important;
+    z-index: 2; 
+}
+
+[data-baseweb="tab-border"] {
+    background-color: rgb(89,59,176);
+}
+
+[data-baseweb="tab-highlight"]{
+    background-color: rgb(170,125,255) !important;
+    transition-duration: 600ms;
+    height: .3em;
+    z-index: 2 !important;
+}
+/* =============================================================== */
+
+
+/* this is all text related stuff 
+=============================================================== */
+[role="tabpanel"] {
+    min-width: 100% !important;
+}
+
+[role="tabpanel"] h3 {
+    font-size: 20px !important;
+}
+
+[data-testid="stMarkdownContainer"] p {
+    font-size: 18px !important;
+    font-weight: bolder;
+}
+
+[data-testid="column"] {
+    justify-content: center;
+    align-content: center;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+[data-testid="column"] h1 {
+    text-align: center;
+    padding: 1.25rem 0px 1rem !important;
+}
+
+[data-testid="column"] h3 {
+    text-align: center;
+    padding: 1.25rem 0px 2rem !important;
+}
+/* =============================================================== */
+
+
+/* this is all image related stuff 
+=============================================================== */
+[title="View fullscreen"] {
+    display: none;
+}
+
+[data-testid="stImage"] img {
+    max-width: 60% !important;
+    vertical-align: middle;
+    align-self: center;
+}
+/* =============================================================== */

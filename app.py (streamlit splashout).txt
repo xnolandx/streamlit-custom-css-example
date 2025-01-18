@@ -1,0 +1,54 @@
+app.py 
+==================================
+import streamlit as st
+
+# setting the page config to wide allows the contents to fill up the web page, looks much better...
+# must be the first "st." command on the page
+st.set_page_config(layout="wide")
+
+#imports and reads the "styles.css file"
+with open('styles.css') as f:
+    st.markdown(f'<style>{f.read()}<style>', unsafe_allow_html=True)
+
+# This creates a 1row x 3column "grid" that the 2 logos and title text are sitting in.
+col1, col2, col3 = st.columns(3)
+
+col1.image('./idsg-logo.png')
+# the .title generates an h1 tag
+col2.title("Intelligence Data Solutions Group")
+# the .subheader generates an h3 tag
+col2.subheader("Weaponizing Data for the Modern Battlefield")
+col3.image('./idsg-logo.png')
+
+# This creates the navbar
+# each tab header generates a p tag
+Home, Mission, Vision, Capabilities, Tools = st.tabs(["Home", "Mission", "Vision", "Capabilities", "Tools"])
+
+# Home tab
+# the .header generates an h2 tag
+Home.header("Welcome To Our Home Page!")
+# the .subheader generates an h3 tag
+Home.subheader("This site is under construction. Full website coming soon.")
+
+# Mission tab
+Mission.subheader("Our Mission is to do stuff with data. I guess.")
+              
+# Vision tab
+Vision.subheader("We wont stop growing until we are larger than the British Empire at its zentih.")
+             
+# Capabilities tab
+Capabilities.subheader("Really. Scary. Stuff. And other stuff.")
+                   
+# Tools tab   
+Tools.subheader("Here's some of the stuff we made:")
+
+st.markdown('<link rel="stylesheet" href="./styles.css">', unsafe_allow_html=True)
+
+# Notes:
+# you need 2 blank spaces before a new line character in order to make a new line in streamlit.
+
+
+
+
+
+
